@@ -1,0 +1,432 @@
+/* ============================================
+   FAMILY TREE - SLOT-BASED LAYOUT
+   ============================================ */
+
+.family-tree-wrapper {
+  min-height: 100vh;
+  padding: 30px 20px;
+  background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.tree-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #212529;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.tree-subtitle {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.plus-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: #3498db;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 2px;
+}
+
+/* ============================================
+   SCROLL CONTAINER
+   ============================================ */
+
+.tree-scroll-container {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 20px;
+  width: 100%;
+}
+
+.family-tree-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: fit-content;
+  padding: 0 50px 200px 50px;
+  margin: 0 auto;
+  /* Center when smaller than viewport */
+}
+
+/* ============================================
+   SVG LINES LAYER
+   ============================================ */
+
+.tree-lines-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 1;
+}
+
+/* ============================================
+   TREE LEVELS
+   ============================================ */
+
+.tree-level {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.level-1 {
+  margin-bottom: 100px;
+}
+
+.level-2 {
+  gap: 60px;
+  margin-bottom: 100px;
+}
+
+.level-3 {
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* ============================================
+   COMBINED LEVEL 2-3: Family branches together
+   Each branch contains a couple + their children
+   ============================================ */
+
+.level-2-3-combined {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.family-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.family-branch .couple-container {
+  margin-bottom: 100px;
+}
+
+.family-branch .slots-group {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* ============================================
+   COUPLE CONTAINER
+   ============================================ */
+
+.couple-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* ============================================
+   SLOTS GROUP (siblings under one parent couple)
+   ============================================ */
+
+.slots-group {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* ============================================
+   SLOT - The anchor point for each family unit
+   Key concept: The slot CENTER stays fixed relative to parent
+   When expanded, slot grows symmetrically
+   ============================================ */
+
+.slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* ============================================
+   SLOT COUPLE ROW
+   Contains: person (and spouse when expanded)
+   When collapsed: just the person, centered
+   When expanded: person left, spouse right, center stays same
+   ============================================ */
+
+.slot-couple-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   SLOT CHILDREN ROW
+   Appears below the couple when expanded
+   Centered under the marriage line
+   ============================================ */
+
+.slot-children-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 90px;
+  justify-content: center;
+  animation: fadeSlideIn 0.3s ease-out;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slot-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ============================================
+   PERSON NODE
+   ============================================ */
+
+.person-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px;
+  cursor: default;
+  position: relative;
+  transition: transform 0.25s ease;
+  min-width: 70px;
+}
+
+.person-node.expandable {
+  cursor: pointer;
+}
+
+.person-node.expandable:hover {
+  transform: scale(1.08);
+}
+
+.person-node.expandable:hover .node-circle {
+  border-color: #3498db;
+  box-shadow: 0 4px 20px rgba(52, 152, 219, 0.35);
+}
+
+.person-node.spouse-node {
+  cursor: default;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================================
+   NODE CIRCLE
+   ============================================ */
+
+.node-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #343a40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.circle-placeholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e9ecef, #ced4da);
+}
+
+/* ============================================
+   NODE LABEL
+   ============================================ */
+
+.node-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.node-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #212529;
+  line-height: 1.2;
+}
+
+.node-lifespan {
+  font-size: 0.7rem;
+  color: #6c757d;
+  margin-top: 1px;
+}
+
+/* ============================================
+   EXPAND BUTTON
+   ============================================ */
+
+.expand-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 18px;
+  height: 18px;
+  background: #3498db;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(52, 152, 219, 0.3);
+  z-index: 5;
+}
+
+.person-node.expanded .expand-btn {
+  background: #e74c3c;
+  box-shadow: 0 2px 6px rgba(231, 76, 60, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1400px) {
+  .level-2 {
+    gap: 50px;
+  }
+
+  .level-3 {
+    gap: 30px;
+  }
+
+  .slots-group {
+    gap: 15px;
+  }
+
+  .couple-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .tree-title {
+    font-size: 1.7rem;
+  }
+
+  .node-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .circle-placeholder {
+    width: 30px;
+    height: 30px;
+  }
+
+  .node-name {
+    font-size: 0.8rem;
+  }
+
+  .node-lifespan {
+    font-size: 0.65rem;
+  }
+
+  .person-node {
+    min-width: 60px;
+    padding: 4px;
+  }
+
+  .slot-couple-row {
+    gap: 20px;
+  }
+
+  .slot-children-row {
+    gap: 12px;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .family-tree-wrapper {
+    padding: 20px 10px;
+  }
+
+  .tree-title {
+    font-size: 1.5rem;
+  }
+
+  .tree-subtitle {
+    font-size: 0.85rem;
+    padding: 0 10px;
+  }
+
+  .node-circle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .circle-placeholder {
+    width: 26px;
+    height: 26px;
+  }
+
+  .expand-btn {
+    width: 15px;
+    height: 15px;
+    font-size: 11px;
+  }
+
+  .level-1,
+  .level-2 {
+    margin-bottom: 80px;
+  }
+
+  .slot-children-row {
+    margin-top: 70px;
+  }
+}

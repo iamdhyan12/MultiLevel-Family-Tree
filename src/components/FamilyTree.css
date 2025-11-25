@@ -1,0 +1,446 @@
+/* Family Tree Wrapper */
+.family-tree-wrapper {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  overflow-x: auto;
+}
+
+.tree-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.tree-subtitle {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+}
+
+/* Container for scrolling */
+.family-tree-container {
+  display: flex;
+  justify-content: center;
+  min-width: fit-content;
+  padding: 20px;
+}
+
+.family-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ============================================
+   COUPLE UNIT STYLES
+   ============================================ */
+.couple-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.couple-container {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.person-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+/* ============================================
+   PERSON NODE STYLES
+   ============================================ */
+.person-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: default;
+  position: relative;
+  transition: transform 0.3s ease;
+  min-width: 80px;
+}
+
+.person-node.expandable {
+  cursor: pointer;
+}
+
+.person-node.expandable:hover {
+  transform: scale(1.08);
+}
+
+.person-node.expandable:hover .node-circle {
+  box-shadow: 0 6px 25px rgba(52, 152, 219, 0.4);
+  border-color: #3498db;
+}
+
+.person-node.spouse {
+  cursor: default;
+}
+
+.node-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #343a40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.circle-inner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #dee2e6, #adb5bd);
+}
+
+.node-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.node-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #212529;
+}
+
+.node-lifespan {
+  font-size: 0.7rem;
+  color: #6c757d;
+  margin-top: 1px;
+}
+
+.expand-indicator {
+  position: absolute;
+  top: 3px;
+  right: 8px;
+  width: 18px;
+  height: 18px;
+  background: #3498db;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(52, 152, 219, 0.3);
+}
+
+.person-node.expanded .expand-indicator {
+  background: #e74c3c;
+  box-shadow: 0 2px 6px rgba(231, 76, 60, 0.3);
+}
+
+/* ============================================
+   COUPLE CONNECTOR LINE (horizontal between spouses)
+   ============================================ */
+.couple-connector {
+  width: 24px;
+  height: 2px;
+  background: #343a40;
+  align-self: center;
+  margin-top: 32px;
+}
+
+/* ============================================
+   CHILDREN CONTAINER & LINES
+   ============================================ */
+.children-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  position: relative;
+}
+
+.vertical-line-to-children {
+  width: 2px;
+  height: 35px;
+  background: #343a40;
+}
+
+.horizontal-line-above-children {
+  height: 2px;
+  background: #343a40;
+  position: absolute;
+  top: 35px;
+}
+
+.children-nodes {
+  display: flex;
+  gap: 16px;
+  position: relative;
+  padding-top: 2px;
+}
+
+.child-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.vertical-line-to-child {
+  width: 2px;
+  height: 25px;
+  background: #343a40;
+}
+
+/* ============================================
+   EXPANDABLE SUBTREE STYLES
+   ============================================ */
+.expandable-subtree {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateX(-10px) scale(0.95);
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expandable-subtree.visible {
+  opacity: 1;
+  max-height: 500px;
+  transform: translateX(0) scale(1);
+  pointer-events: auto;
+  overflow: visible;
+}
+
+.spouse-container {
+  display: flex;
+  align-items: center;
+}
+
+.spouse-connector {
+  width: 24px;
+  height: 2px;
+  background: #e74c3c;
+}
+
+/* ============================================
+   EXPANDED CHILDREN STYLES
+   ============================================ */
+.expanded-children {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 40px;
+  position: relative;
+}
+
+.children-connector-vertical {
+  width: 2px;
+  height: 25px;
+  background: #e74c3c;
+}
+
+.children-row {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  padding-top: 2px;
+}
+
+.child-node-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.child-connector {
+  width: 2px;
+  height: 18px;
+  background: #e74c3c;
+}
+
+/* Horizontal line spanning all children */
+.children-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 2px;
+  background: #e74c3c;
+  left: 40px;
+  right: 40px;
+}
+
+/* Single child - no horizontal line needed */
+.children-row:has(.child-node-wrapper:only-child)::before {
+  display: none;
+}
+
+/* ============================================
+   EXPANDED STATE ADJUSTMENTS
+   ============================================ */
+.person-wrapper.expanded {
+  z-index: 5;
+}
+
+/* ============================================
+   LEAF LEVEL STYLING
+   ============================================ */
+.couple-unit.leaf-level .couple-container {
+  flex-direction: row;
+}
+
+.couple-unit.leaf-level .couple-connector {
+  display: none;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1400px) {
+  .children-nodes {
+    gap: 12px;
+  }
+  
+  .person-node {
+    min-width: 70px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .family-tree-wrapper {
+    padding: 20px 10px;
+  }
+  
+  .node-circle {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .circle-inner {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .node-name {
+    font-size: 0.8rem;
+  }
+  
+  .node-lifespan {
+    font-size: 0.65rem;
+  }
+  
+  .children-nodes {
+    gap: 8px;
+  }
+  
+  .couple-connector {
+    width: 18px;
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tree-title {
+    font-size: 1.6rem;
+  }
+  
+  .tree-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .node-circle {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .circle-inner {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .expand-indicator {
+    width: 15px;
+    height: 15px;
+    font-size: 11px;
+  }
+  
+  .person-node {
+    min-width: 60px;
+    padding: 4px 6px;
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.expandable-subtree.visible .spouse-container {
+  animation: fadeInScale 0.35s ease-out forwards;
+}
+
+.expandable-subtree.visible .expanded-children {
+  animation: fadeInScale 0.4s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.expandable-subtree.visible .child-node-wrapper {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.expandable-subtree.visible .child-node-wrapper:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.expandable-subtree.visible .child-node-wrapper:nth-child(2) {
+  animation-delay: 0.22s;
+}
+
+.expandable-subtree.visible .child-node-wrapper:nth-child(3) {
+  animation-delay: 0.29s;
+}
+
+.expandable-subtree.visible .child-node-wrapper:nth-child(4) {
+  animation-delay: 0.36s;
+}
