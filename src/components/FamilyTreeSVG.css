@@ -1,5 +1,5 @@
 /* ============================================
-   FAMILY TREE - SLOT-BASED LAYOUT
+   FAMILY TREE - MULTI-LEVEL LAYOUT
    ============================================ */
 
 .family-tree-wrapper {
@@ -55,9 +55,8 @@
   flex-direction: column;
   align-items: center;
   min-width: fit-content;
-  padding: 0 50px 200px 50px;
+  padding: 0 50px 300px 50px;
   margin: 0 auto;
-  /* Center when smaller than viewport */
 }
 
 /* ============================================
@@ -102,7 +101,6 @@
 
 /* ============================================
    COMBINED LEVEL 2-3: Family branches together
-   Each branch contains a couple + their children
    ============================================ */
 
 .level-2-3-combined {
@@ -139,7 +137,7 @@
 }
 
 /* ============================================
-   SLOTS GROUP (siblings under one parent couple)
+   SLOTS GROUP
    ============================================ */
 
 .slots-group {
@@ -149,9 +147,7 @@
 }
 
 /* ============================================
-   SLOT - The anchor point for each family unit
-   Key concept: The slot CENTER stays fixed relative to parent
-   When expanded, slot grows symmetrically
+   SLOT - Level 3 expandable containers
    ============================================ */
 
 .slot {
@@ -161,13 +157,6 @@
   position: relative;
 }
 
-/* ============================================
-   SLOT COUPLE ROW
-   Contains: person (and spouse when expanded)
-   When collapsed: just the person, centered
-   When expanded: person left, spouse right, center stays same
-   ============================================ */
-
 .slot-couple-row {
   display: flex;
   align-items: flex-start;
@@ -176,14 +165,43 @@
   transition: all 0.3s ease;
 }
 
-/* ============================================
-   SLOT CHILDREN ROW
-   Appears below the couple when expanded
-   Centered under the marriage line
-   ============================================ */
-
 .slot-children-row {
   display: flex;
+  gap: 16px;
+  margin-top: 90px;
+  justify-content: center;
+  animation: fadeSlideIn 0.3s ease-out;
+}
+
+/* ============================================
+   EXPANDABLE SLOT - For Level 4+ nodes (RECURSIVE)
+   THIS IS THE KEY SECTION THAT WAS MISSING
+   ============================================ */
+
+.expandable-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.expandable-couple-row {
+  display: flex;
+  flex-direction: row;
+  /* IMPORTANT: Horizontal layout for spouse */
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.expandable-couple-row.expanded {
+  gap: 24px;
+}
+
+.expandable-children-row {
+  display: flex;
+  flex-direction: row;
+  /* IMPORTANT: Horizontal layout for siblings */
   gap: 16px;
   margin-top: 90px;
   justify-content: center;
@@ -200,12 +218,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.slot-child {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /* ============================================
@@ -287,23 +299,25 @@
   align-items: center;
   margin-top: 6px;
   text-align: center;
+  max-width: 100px;
 }
 
 .node-name {
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   color: #212529;
   line-height: 1.2;
+  word-wrap: break-word;
 }
 
 .node-lifespan {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: #6c757d;
   margin-top: 1px;
 }
 
 /* ============================================
-   EXPAND BUTTON
+   EXPAND BUTTON - Base styles
    ============================================ */
 
 .expand-btn {
@@ -329,6 +343,55 @@
 .person-node.expanded .expand-btn {
   background: #e74c3c;
   box-shadow: 0 2px 6px rgba(231, 76, 60, 0.3);
+}
+
+/* ============================================
+   LEVEL-SPECIFIC EXPAND BUTTON COLORS
+   ============================================ */
+
+/* Level 3 - Red */
+.level-3-node .expand-btn {
+  background: #e74c3c;
+}
+
+.level-3-node.expanded .expand-btn {
+  background: #c0392b;
+}
+
+/* Level 4 - Purple */
+.level-4-node .expand-btn {
+  background: #9b59b6;
+}
+
+.level-4-node.expanded .expand-btn {
+  background: #8e44ad;
+}
+
+/* Level 5 - Blue */
+.level-5-node .expand-btn {
+  background: #2980b9;
+}
+
+.level-5-node.expanded .expand-btn {
+  background: #1a5276;
+}
+
+/* Level 6 - Green */
+.level-6-node .expand-btn {
+  background: #27ae60;
+}
+
+.level-6-node.expanded .expand-btn {
+  background: #1e8449;
+}
+
+/* Level 7 - Orange */
+.level-7-node .expand-btn {
+  background: #f39c12;
+}
+
+.level-7-node.expanded .expand-btn {
+  background: #d68910;
 }
 
 /* ============================================
@@ -369,11 +432,11 @@
   }
 
   .node-name {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .node-lifespan {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
   }
 
   .person-node {
@@ -381,13 +444,19 @@
     padding: 4px;
   }
 
-  .slot-couple-row {
+  .slot-couple-row,
+  .expandable-couple-row {
     gap: 20px;
   }
 
-  .slot-children-row {
+  .slot-children-row,
+  .expandable-children-row {
     gap: 12px;
     margin-top: 80px;
+  }
+
+  .node-label {
+    max-width: 80px;
   }
 }
 
@@ -426,7 +495,16 @@
     margin-bottom: 80px;
   }
 
-  .slot-children-row {
+  .slot-children-row,
+  .expandable-children-row {
     margin-top: 70px;
+  }
+
+  .node-name {
+    font-size: 0.65rem;
+  }
+
+  .node-label {
+    max-width: 70px;
   }
 }
