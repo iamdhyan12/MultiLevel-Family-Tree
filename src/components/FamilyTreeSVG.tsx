@@ -478,10 +478,10 @@ const FamilyTreeSVG: React.FC = () => {
 
   return (
     <div className="family-tree-wrapper">
-      <h1 className="tree-title">Patel Family Tree</h1>
-      <p className="tree-subtitle">
+      <h1 className="tree-title">HINA Parivar</h1>
+      {/* <p className="tree-subtitle">
         Click on nodes with <span className="plus-icon">+</span> to expand and see spouse &amp; children
-      </p>
+      </p> */}
 
       <div className="tree-scroll-container">
         <div className="family-tree-container" ref={treeRef}>
