@@ -1,0 +1,697 @@
+{
+  "id": "1",
+  "name": "Laxmichand Patel",
+  "spouse": {
+    "id": "1-spouse",
+    "name": "Revabaa Patel"
+  },
+  "children": [
+    {
+      "id": "2",
+      "name": "Jeeviben Patel",
+      "spouse": {
+        "id": "2-spouse",
+        "name": "Narayan Patel"
+      },
+      "children": []
+    },
+    {
+      "id": "8",
+      "name": "Nagardas Patel",
+      "spouse": {
+        "id": "8-spouse",
+        "name": "Dahiben Patel"
+      },
+      "children": [
+        {
+          "id": "14",
+          "name": "Gangaben Patel",
+          "spouse": {
+            "id": "14-spouse",
+            "name": "Chotalal Patel"
+          },
+          "children": []
+        },
+        {
+          "id": "16",
+          "name": "Ambaben Patel",
+          "spouse": {
+            "id": "16-spouse",
+            "name": "Virchanddas Patel"
+          },
+          "children": []
+        },
+        {
+          "id": "18",
+          "name": "Radhaben Patel",
+          "spouse": {
+            "id": "18-spouse",
+            "name": "Jayantilal Patel"
+          },
+          "children": []
+        },
+        {
+          "id": "20",
+          "name": "Rambhai Patel",
+          "spouse": {
+            "id": "20-spouse",
+            "name": "Kantaben Patel"
+          },
+          "children": [
+            {
+              "id": "46",
+              "name": "Ushaben patel",
+              "spouse": {
+                "id": "46-spouse",
+                "name": "Manulal Patel"
+              },
+              "children": []
+            },
+            {
+              "id": "48",
+              "name": "Umaben Patel",
+              "spouse": {
+                "id": "48-spouse",
+                "name": "Narendrakumar Patel"
+              },
+              "children": []
+            },
+            {
+              "id": "50",
+              "name": "Ilaben Patel",
+              "spouse": {
+                "id": "50-spouse",
+                "name": "Narendakumar Patel"
+              },
+              "children": []
+            },
+            {
+              "id": "52",
+              "name": "Ashwinbhai Patel",
+              "spouse": {
+                "id": "52-spouse",
+                "name": "Premilaben Patel"
+              },
+              "children": [
+                {
+                  "id": "110",
+                  "name": "Ritul Patel",
+                  "spouse": {
+                    "id": "110-spouse",
+                    "name": "Palak Patel"
+                  },
+                  "children": [
+                    {
+                      "id": "142",
+                      "name": "Harvi Patel",
+                      "children": []
+                    },
+                    {
+                      "id": "143",
+                      "name": "Mihan Patel",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "112",
+                  "name": "Komal Patel",
+                  "spouse": {
+                    "id": "112-spouse",
+                    "name": "Vicky Patel"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "54",
+              "name": "Ashokbhai Patel",
+              "spouse": {
+                "id": "54-spouse",
+                "name": "Jyotsnaben Patel"
+              },
+              "children": [
+                {
+                  "id": "114",
+                  "name": "Dr.Keval Patel",
+                  "children": []
+                },
+                {
+                  "id": "115",
+                  "name": "Mittal",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "22",
+          "name": "Govindbhai Patel",
+          "spouse": {
+            "id": "22-spouse",
+            "name": "Kantaben Patel"
+          },
+          "children": [
+            {
+              "id": "56",
+              "name": "Geeraben Shah",
+              "spouse": {
+                "id": "56-spouse",
+                "name": "Chetankumar Shah"
+              },
+              "children": []
+            },
+            {
+              "id": "58",
+              "name": "Dhara Patel",
+              "spouse": {
+                "id": "58-spouse",
+                "name": "Maulik Patel"
+              },
+              "children": []
+            },
+            {
+              "id": "60",
+              "name": "Devanshu Patel",
+              "spouse": {
+                "id": "60-spouse",
+                "name": "Amisha Patel"
+              },
+              "children": [
+                {
+                  "id": "116",
+                  "name": "Anshal Patel",
+                  "children": []
+                },
+                {
+                  "id": "117",
+                  "name": "Siya Patel",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "24",
+          "name": "Baldevbhai Patel",
+          "spouse": {
+            "id": "24-spouse",
+            "name": "Anandiben Patel"
+          },
+          "children": [
+            {
+              "id": "62",
+              "name": "Kaushik Patel",
+              "spouse": {
+                "id": "62-spouse",
+                "name": "Parul Patel"
+              },
+              "children": [
+                {
+                  "id": "138",
+                  "name": "Kush Patel",
+                  "children": []
+                },
+                {
+                  "id": "139",
+                  "name": "Shiv Patel",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "64",
+              "name": "Hirenbhai Patel",
+              "spouse": {
+                "id": "64-spouse",
+                "name": "Nimishaben Patel"
+              },
+              "children": [
+                {
+                  "id": "140",
+                  "name": "Meet Patel",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "66",
+              "name": "Nilesh Patel",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Ujiben Patel",
+      "spouse": {
+        "id": "4-spouse",
+        "name": "Mangaldas Patel"
+      },
+      "children": []
+    },
+    {
+      "id": "10",
+      "name": "Hargovandas Patel",
+      "spouse": {
+        "id": "10-spouse",
+        "name": "Kankuben Patel"
+      },
+      "children": [
+        {
+          "id": "26",
+          "name": "Natvarbhai Patel",
+          "spouse": {
+            "id": "26-spouse",
+            "name": "Vidhyaben Patel"
+          },
+          "children": [
+            {
+              "id": "67",
+              "name": "Sarojben Patel",
+              "spouse": {
+                "id": "67-spouse",
+                "name": "Rajendra Patel"
+              },
+              "children": []
+            },
+            {
+              "id": "69",
+              "name": "Bharatbhai Patel",
+              "spouse": {
+                "id": "69-spouse",
+                "name": "Pravinaben Patel"
+              },
+              "children": [
+                {
+                  "id": "118",
+                  "name": "Dr. Keyur Patel",
+                  "spouse": {
+                    "id": "118-spouse",
+                    "name": "Dr. Kinjal Patel"
+                  },
+                  "children": [
+                    {
+                      "id": "144",
+                      "name": "Jiyaan Patel",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "71",
+              "name": "Veenaben Patel",
+              "spouse": {
+                "id": "71-spouse",
+                "name": "Sureshbhai"
+              },
+              "children": []
+            },
+            {
+              "id": "73",
+              "name": "Rameshchandra Patel",
+              "spouse": {
+                "id": "73-spouse",
+                "name": "Surekhaben Patel"
+              },
+              "children": [
+                {
+                  "id": "120",
+                  "name": "Deep Patel",
+                  "spouse": {
+                    "id": "120-spouse",
+                    "name": "Helly Patel"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "28",
+          "name": "Subhadraben Patel",
+          "spouse": {
+            "id": "28-spouse",
+            "name": "Gandalal Patel"
+          },
+          "children": []
+        },
+        {
+          "id": "30",
+          "name": "Babulal Patel",
+          "spouse": {
+            "id": "30-spouse",
+            "name": "Madhuben Patel"
+          },
+          "children": [
+            {
+              "id": "75",
+              "name": "Dr.Rajeshkumar Patel",
+              "spouse": {
+                "id": "75-spouse",
+                "name": "Heenaben Patel"
+              },
+              "children": [
+                {
+                  "id": "122",
+                  "name": "Alisha Patel",
+                  "spouse": {
+                    "id": "122-spouse",
+                    "name": "Neel Shah"
+                  },
+                  "children": []
+                },
+                {
+                  "id": "124",
+                  "name": "Dhyan Patel",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "77",
+              "name": "Seemaben Patel",
+              "spouse": {
+                "id": "77-spouse",
+                "name": "Vinodkumar Patel"
+              },
+              "children": []
+            },
+            {
+              "id": "79",
+              "name": "Tejal Patel",
+              "spouse": {
+                "id": "79-spouse",
+                "name": "Jigar Patel"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "32",
+          "name": "Jayantibhai Patel",
+          "spouse": {
+            "id": "32-spouse",
+            "name": "Vasantiben Patel"
+          },
+          "children": [
+            {
+              "id": "81",
+              "name": "Sonalben Patel",
+              "spouse": {
+                "id": "81-spouse",
+                "name": "Dilipkumar Patel"
+              },
+              "children": []
+            },
+            {
+              "id": "83",
+              "name": "Jagrutiben Patel",
+              "spouse": {
+                "id": "83-spouse",
+                "name": "Dilipkumar Patel"
+              },
+              "children": []
+            },
+            {
+              "id": "85",
+              "name": "Rekhaben Patel",
+              "spouse": {
+                "id": "85-spouse",
+                "name": "Hirenkumar Patel"
+              },
+              "children": []
+            },
+            {
+              "id": "87",
+              "name": "Vishal Patel",
+              "spouse": {
+                "id": "87-spouse",
+                "name": "Bindi Patel"
+              },
+              "children": [
+                {
+                  "id": "125",
+                  "name": "Riyaan",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "34",
+          "name": "Ramanbhai Patel",
+          "spouse": {
+            "id": "34-spouse",
+            "name": "Leelben Patel"
+          },
+          "children": [
+            {
+              "id": "89",
+              "name": "Nitinbhai Patel",
+              "spouse": {
+                "id": "89-spouse",
+                "name": "Amitaben Patel"
+              },
+              "children": [
+                {
+                  "id": "126",
+                  "name": "Jenish Patel",
+                  "children": []
+                },
+                {
+                  "id": "127",
+                  "name": "Hensi Patel",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "91",
+              "name": "Hitesh Patel",
+              "spouse": {
+                "id": "91-spouse",
+                "name": "Hemali Patel"
+              },
+              "children": [
+                {
+                  "id": "128",
+                  "name": "Om Patel",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "93",
+              "name": "Trupti Patel",
+              "spouse": {
+                "id": "93-spouse",
+                "name": "Mehulkumar Patel"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Heeraben Patel",
+      "spouse": {
+        "id": "6-spouse",
+        "name": "Khodidas Patel"
+      },
+      "children": []
+    },
+    {
+      "id": "12",
+      "name": "Ishvardas Patel",
+      "spouse": {
+        "id": "12-spouse",
+        "name": "Shakariben Patel"
+      },
+      "children": [
+        {
+          "id": "36",
+          "name": "Madhuben Patel",
+          "spouse": {
+            "id": "36-spouse",
+            "name": "Ramdas Patel"
+          },
+          "children": []
+        },
+        {
+          "id": "38",
+          "name": "Kantibhai Patel",
+          "spouse": {
+            "id": "38-spouse",
+            "name": "Sarojben Patel"
+          },
+          "children": [
+            {
+              "id": "95",
+              "name": "Bhaveshbhai Patel",
+              "spouse": {
+                "id": "95-spouse",
+                "name": "Neelaben Patel"
+              },
+              "children": [
+                {
+                  "id": "129",
+                  "name": "Dr.Meghan Patel",
+                  "spouse": {
+                    "id": "129-spouse",
+                    "name": "Prachi Patel"
+                  },
+                  "children": []
+                },
+                {
+                  "id": "131",
+                  "name": "Vedan Patel",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "97",
+              "name": "Miteshbhai Patel",
+              "spouse": {
+                "id": "97-spouse",
+                "name": "Riya Patel"
+              },
+              "children": [
+                {
+                  "id": "132",
+                  "name": "Sanvi Patel",
+                  "children": []
+                },
+                {
+                  "id": "133",
+                  "name": "Hitvam Patel",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "99",
+              "name": "Ketalben Patel",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "40",
+          "name": "Shardaben Patel",
+          "spouse": {
+            "id": "40-spouse",
+            "name": "Chimanlal Patel"
+          },
+          "children": []
+        },
+        {
+          "id": "42",
+          "name": "Dasrathbhai Patel",
+          "spouse": {
+            "id": "42-spouse",
+            "name": "Kapilaben Patel"
+          },
+          "children": [
+            {
+              "id": "100",
+              "name": "Viral Patel",
+              "spouse": {
+                "id": "100-spouse",
+                "name": "Reema Patel"
+              },
+              "children": [
+                {
+                  "id": "134",
+                  "name": "Jaimin Patel",
+                  "children": []
+                },
+                {
+                  "id": "141",
+                  "name": "Dhruvi Patel",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "102",
+              "name": "Dhiral Patel",
+              "spouse": {
+                "id": "102-spouse",
+                "name": "Hiral Patel"
+              },
+              "children": [
+                {
+                  "id": "135",
+                  "name": "Hit Patel",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "44",
+          "name": "Dineshbhai Patel",
+          "spouse": {
+            "id": "44-spouse",
+            "name": "Jyotsnaben Patel"
+          },
+          "children": [
+            {
+              "id": "104",
+              "name": "Hetalben Patel",
+              "spouse": {
+                "id": "104-spouse",
+                "name": "Jignesh Patel"
+              },
+              "children": []
+            },
+            {
+              "id": "106",
+              "name": "Payal Patel",
+              "spouse": {
+                "id": "106-spouse",
+                "name": "Ronak Patel"
+              },
+              "children": []
+            },
+            {
+              "id": "108",
+              "name": "Kapil Patel",
+              "spouse": {
+                "id": "108-spouse",
+                "name": "Priyanka Patel"
+              },
+              "children": [
+                {
+                  "id": "136",
+                  "name": "Shiyan Patel",
+                  "children": []
+                },
+                {
+                  "id": "137",
+                  "name": "Anaya Patel",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,15 @@
-import FamilyTreeSVG from './components/FamilyTreeSVG'
-import './App.css'
+import FamilyTreeFlow from './components/FamilyTreeFlow';
+import './App.css';
 
 function App() {
-  return <FamilyTreeSVG />
+  return (
+    <div className="app">
+      <header className="header">
+        <h1>HINA Parivar</h1>
+      </header>
+      <FamilyTreeFlow />
+    </div>
+  );
 }
 
-export default App
+export default App;

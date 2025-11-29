@@ -1,0 +1,142 @@
+/* ============================================
+   TREE CONTAINER
+   ============================================ */
+.tree-container {
+  width: 100%;
+  height: 100vh;
+  background: #f5f5f5;
+}
+
+/* ============================================
+   PERSON NODE
+   ============================================ */
+.person-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+  user-select: none;
+}
+
+.person-node.expandable {
+  cursor: pointer;
+}
+
+/* ============================================
+   NODE CIRCLE
+   ============================================ */
+.node-circle {
+  position: relative;
+  border-radius: 50%;
+  border: 3px solid #333;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.circle-inner {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e6e6e6, #f0f0f0);
+}
+
+.person-node.expandable:hover .node-circle {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   EXPAND BUTTON
+   ============================================ */
+.expand-btn {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.expand-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Level-specific button colors */
+.level-1-btn {
+  background: #333;
+}
+
+.level-2-btn {
+  background: #c53030;
+}
+
+.level-3-btn {
+  background: #805ad5;
+}
+
+.level-4-btn {
+  background: #2b6cb0;
+}
+
+.level-5-btn {
+  background: #38a169;
+}
+
+/* ============================================
+   NODE NAME
+   ============================================ */
+.node-name {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  max-width: 100%;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+/* ============================================
+   LINES LAYER
+   ============================================ */
+.lines-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   REACT FLOW OVERRIDES
+   ============================================ */
+.react-flow__node {
+  z-index: 1 !important;
+}
+
+.react-flow__pane {
+  cursor: grab;
+}
+
+.react-flow__pane:active {
+  cursor: grabbing;
+}
+
+/* Hide React Flow attribution */
+.react-flow__attribution {
+  display: none !important;
+}
