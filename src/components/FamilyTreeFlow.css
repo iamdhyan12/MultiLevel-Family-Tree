@@ -43,6 +43,16 @@
   background: linear-gradient(145deg, #e6e6e6, #f0f0f0);
 }
 
+/* ============================================
+   PERSON IMAGE
+   ============================================ */
+.person-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .person-node.expandable:hover .node-circle {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

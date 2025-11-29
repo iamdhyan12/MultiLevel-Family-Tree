@@ -22,9 +22,11 @@ import familyData from '../data/family.json';
 interface FamilyMember {
   id: string;
   name: string;
+  image?: string;  // Cloudinary image URL
   spouse?: {
     id: string;
     name: string;
+    image?: string;  // Cloudinary image URL for spouse
   };
   children: FamilyMember[];
 }
@@ -61,6 +63,7 @@ const LAYOUT = {
 // ============================================
 interface PersonNodeData {
   label: string;
+  image?: string;  // Cloudinary image URL
   isExpandable: boolean;
   isExpanded: boolean;
   isSpouse: boolean;
@@ -68,7 +71,7 @@ interface PersonNodeData {
 }
 
 function PersonNode({ data }: { data: PersonNodeData }) {
-  const { label, isExpandable, isExpanded, isSpouse, level } = data;
+  const { label, image, isExpandable, isExpanded, isSpouse, level } = data;
 
   return (
     <div
@@ -78,7 +81,21 @@ function PersonNode({ data }: { data: PersonNodeData }) {
       <Handle type="target" position={Position.Top} style={{ opacity: 0 }} />
 
       <div className="node-circle" style={{ width: LAYOUT.CIRCLE_SIZE, height: LAYOUT.CIRCLE_SIZE }}>
-        <div className="circle-inner" />
+        {image ? (
+          <img 
+            src={image} 
+            alt={label}
+            className="person-image"
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              borderRadius: '50%',
+              objectFit: 'cover'
+            }}
+          />
+        ) : (
+          <div className="circle-inner" />
+        )}
         {isExpandable && !isSpouse && (
           <div className={`expand-btn level-${level}-btn`}>
             {isExpanded ? '−' : '+'}
@@ -224,6 +241,7 @@ function FamilyTreeInner() {
         position: { x: personX - LAYOUT.NODE_WIDTH / 2, y },
         data: {
           label: node.name,
+          image: node.image,
           isExpandable: node.children.length > 0 || !!node.spouse,
           isExpanded,
           isSpouse: false,
@@ -247,6 +265,7 @@ function FamilyTreeInner() {
           position: { x: spouseX! - LAYOUT.NODE_WIDTH / 2, y },
           data: {
             label: node.spouse.name,
+            image: node.spouse.image,
             isExpandable: false,
             isExpanded: false,
             isSpouse: true,
