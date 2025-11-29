@@ -59,6 +59,45 @@ const LAYOUT = {
 };
 
 // ============================================
+// IMAGE PRELOADING UTILITIES
+// ============================================
+const preloadedImages = new Set<string>();
+
+function preloadImage(url: string | undefined): void {
+  if (!url || preloadedImages.has(url)) return;
+  preloadedImages.add(url);
+  const img = new Image();
+  img.src = url;
+}
+
+function preloadMemberImages(member: FamilyMember): void {
+  // Preload member's own image
+  preloadImage(member.image);
+
+  // Preload spouse image
+  if (member.spouse?.image) {
+    preloadImage(member.spouse.image);
+  }
+
+  // Preload all children's images (and their spouses)
+  for (const child of member.children) {
+    preloadImage(child.image);
+    if (child.spouse?.image) {
+      preloadImage(child.spouse.image);
+    }
+  }
+}
+
+function findMemberById(root: FamilyMember, id: string): FamilyMember | null {
+  if (root.id === id) return root;
+  for (const child of root.children) {
+    const found = findMemberById(child, id);
+    if (found) return found;
+  }
+  return null;
+}
+
+// ============================================
 // PERSON NODE COMPONENT
 // ============================================
 interface PersonNodeData {
@@ -82,13 +121,13 @@ function PersonNode({ data }: { data: PersonNodeData }) {
 
       <div className="node-circle" style={{ width: LAYOUT.CIRCLE_SIZE, height: LAYOUT.CIRCLE_SIZE }}>
         {image ? (
-          <img 
-            src={image} 
+          <img
+            src={image}
             alt={label}
             className="person-image"
-            style={{ 
-              width: '100%', 
-              height: '100%', 
+            style={{
+              width: '100%',
+              height: '100%',
               borderRadius: '50%',
               objectFit: 'cover'
             }}
@@ -193,6 +232,14 @@ function FamilyTreeInner() {
   const onNodeClick = useCallback((_: React.MouseEvent, node: Node) => {
     const nodeData = node.data as unknown as PersonNodeData;
     if (nodeData.isExpandable && !nodeData.isSpouse) {
+      // Find the member in the family tree
+      const member = findMemberById(familyData as FamilyMember, node.id);
+
+      // Preload images BEFORE expanding (if we're about to expand)
+      if (member && !expanded.has(node.id)) {
+        preloadMemberImages(member);
+      }
+
       setExpanded(prev => {
         const next = new Set(prev);
         if (next.has(node.id)) {
@@ -203,7 +250,7 @@ function FamilyTreeInner() {
         return next;
       });
     }
-  }, []);
+  }, [expanded]);
 
   const { nodes, lines } = useMemo(() => {
     const nodes: Node[] = [];
@@ -387,14 +434,26 @@ function FamilyTreeInner() {
     return { nodes, lines };
   }, [expanded]);
 
+  // Preload images on hover (before click) for even faster loading
+  const onNodeMouseEnter = useCallback((_: React.MouseEvent, node: Node) => {
+    const nodeData = node.data as unknown as PersonNodeData;
+    if (nodeData.isExpandable && !nodeData.isSpouse && !expanded.has(node.id)) {
+      const member = findMemberById(familyData as FamilyMember, node.id);
+      if (member) {
+        preloadMemberImages(member);
+      }
+    }
+  }, [expanded]);
+
   return (
     <ReactFlow
       nodes={nodes}
       edges={[]}
       nodeTypes={nodeTypes}
       onNodeClick={onNodeClick}
+      onNodeMouseEnter={onNodeMouseEnter}
       fitView
-      fitViewOptions={{ padding: 0.15 }}
+      fitViewOptions={{ padding: 0.15, duration: 0 }}
       minZoom={0.1}
       maxZoom={2}
       nodesDraggable={false}
