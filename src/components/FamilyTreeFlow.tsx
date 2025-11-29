@@ -237,7 +237,6 @@ function FamilyTreeInner() {
       // The connection point for lines coming from parent
       // If has spouse, it's the center of the marriage line
       // If no spouse, it's the top of the circle
-      let connectionY = circleCenterY - LAYOUT.CIRCLE_SIZE / 2; // Top of circle by default
       let marriageLineX: number | null = null;
 
       // Add spouse node if expanded
@@ -268,8 +267,6 @@ function FamilyTreeInner() {
           type: 'marriage',
         });
 
-        // The parent line should connect to the marriage line (circle center Y)
-        connectionY = circleCenterY;
       }
 
       // Process children if expanded
