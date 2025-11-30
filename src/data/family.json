@@ -548,7 +548,7 @@
                     "name": "Neel Shah",
                     "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/neel_ldcx0z",
                     "birthYear": 1998,
-                    "place": "Florida, USA"
+                    "place": "St. Petersburg, USA"
                   },
                   "children": [],
                   "birthYear": 1998,
@@ -573,6 +573,7 @@
               "spouse": {
                 "id": "77-spouse",
                 "name": "Vinodkumar Patel",
+                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/vinod_cpvyze",
                 "birthYear": 1977,
                 "place": "Boston, USA"
               },
@@ -596,6 +597,7 @@
               "place": "Mechanicsburg, USA"
             }
           ],
+          "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/babulal_ktf4pq",
           "birthYear": 1946,
           "deathYear": 2009,
           "place": "Ahmedabad ,IND"
