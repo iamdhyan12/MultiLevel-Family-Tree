@@ -541,7 +541,7 @@
               "spouse": {
                 "id": "75-spouse",
                 "name": "Heenaben Patel",
-                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/heena_gzw6d1",
+                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/heena_gzw6d1",
                 "birthYear": 1974,
                 "place": "Ahmedabad"
               },
@@ -1064,7 +1064,7 @@
               "children": [
                 {
                   "id": "136",
-                  "name": "Shiyan Patel",
+                  "name": "Siaan Patel",
                   "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/shiyan_j7u16f",
                   "children": [],
                   "birthYear": 2018,
