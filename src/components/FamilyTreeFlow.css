@@ -105,17 +105,69 @@
 }
 
 /* ============================================
-   NODE NAME
+   NODE INFO CONTAINER
    ============================================ */
-.node-name {
+.node-info {
   margin-top: 8px;
-  font-size: 12px;
-  font-weight: 500;
-  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   max-width: 100%;
+}
+
+/* ============================================
+   NODE NAME (First name + Surname)
+   ============================================ */
+.node-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   line-height: 1.2;
-  word-wrap: break-word;
+}
+
+.node-name .first-name {
+  font-size: 12px;
+  /* <<< CHANGE THIS to adjust first name size */
+  font-weight: 600;
+  /* <<< CHANGE THIS for boldness (400=normal, 600=semi-bold, 700=bold) */
+  color: #333;
+  /* <<< CHANGE THIS for text color */
+}
+
+.node-name .surname {
+  font-size: 12px;
+  /* <<< CHANGE THIS to adjust surname size */
+  font-weight: 500;
+  /* <<< CHANGE THIS for boldness */
+  color: #333;
+  /* <<< CHANGE THIS for text color */
+}
+
+/* ============================================
+   NODE YEARS (Birth-Death)
+   ============================================ */
+.node-years {
+  font-size: 11px;
+  /* <<< CHANGE THIS to adjust years font size */
+  font-weight: 500;
+  /* <<< CHANGE THIS for boldness */
+  color: #555;
+  /* <<< CHANGE THIS for text color */
+  margin-top: 2px;
+}
+
+/* ============================================
+   NODE PLACE (Location - smaller font)
+   ============================================ */
+.node-place {
+  font-size: 9px;
+  /* <<< CHANGE THIS to adjust place font size (smaller than name/years) */
+  font-weight: 400;
+  /* <<< CHANGE THIS for boldness */
+  color: #777;
+  /* <<< CHANGE THIS for text color (lighter = more subtle) */
+  margin-top: 2px;
 }
 
 /* ============================================

@@ -21,12 +21,22 @@ import familyData from '../data/family.json';
 
 interface FamilyMember {
   id: string;
-  name: string;
-  image?: string;  // Cloudinary image URL
+  name: string;           // Full name - will be split into firstName and surname
+  firstName?: string;     // Optional: if you want to specify separately
+  surname?: string;       // Optional: if you want to specify separately
+  birthYear?: number;     // e.g., 1907
+  deathYear?: number;     // e.g., 1977 (if not present, person is alive)
+  place?: string;         // e.g., "Pansar, IN"
+  image?: string;         // Cloudinary image URL
   spouse?: {
     id: string;
     name: string;
-    image?: string;  // Cloudinary image URL for spouse
+    firstName?: string;
+    surname?: string;
+    birthYear?: number;
+    deathYear?: number;
+    place?: string;
+    image?: string;       // Cloudinary image URL for spouse
   };
   children: FamilyMember[];
 }
@@ -50,12 +60,12 @@ interface ChildPosition {
 // LAYOUT CONSTANTS
 // ============================================
 const LAYOUT = {
-  NODE_WIDTH: 120,
-  NODE_HEIGHT: 110,
+  NODE_WIDTH: 140,        // Wider to fit longer names
+  NODE_HEIGHT: 160,       // Taller to fit name + years + place
   CIRCLE_SIZE: 75,
-  SPOUSE_GAP: 100,        // Gap between husband and wife circles
-  SIBLING_GAP: 40,        // Minimum gap between siblings (reduced from larger value)
-  VERTICAL_SPACING: 160,  // Vertical space between levels
+  SPOUSE_GAP: 120,        // Gap between husband and wife circles
+  SIBLING_GAP: 50,        // Minimum gap between siblings
+  VERTICAL_SPACING: 200,  // More vertical space between levels
 };
 
 // ============================================
@@ -101,16 +111,55 @@ function findMemberById(root: FamilyMember, id: string): FamilyMember | null {
 // PERSON NODE COMPONENT
 // ============================================
 interface PersonNodeData {
-  label: string;
-  image?: string;  // Cloudinary image URL
+  label: string;          // Full name (kept for compatibility)
+  firstName: string;      // First name
+  surname: string;        // Surname/Last name
+  birthYear?: number;     // Birth year
+  deathYear?: number;     // Death year (undefined = still alive)
+  place?: string;         // Place of living
+  image?: string;         // Cloudinary image URL
   isExpandable: boolean;
   isExpanded: boolean;
   isSpouse: boolean;
   level: number;
 }
 
+// Helper function to split full name into first name and surname
+function splitName(fullName: string): { firstName: string; surname: string } {
+  const parts = fullName.trim().split(' ');
+  if (parts.length === 1) {
+    return { firstName: parts[0], surname: '' };
+  }
+  // Last word is surname, everything else is first name
+  const surname = parts[parts.length - 1];
+  const firstName = parts.slice(0, -1).join(' ');
+  return { firstName, surname };
+}
+
+// Helper function to format years display
+function formatYears(birthYear?: number, deathYear?: number): string | null {
+  if (!birthYear) return null;
+  if (deathYear) {
+    return `${birthYear}-${deathYear}`;
+  }
+  return `${birthYear}-present`;
+}
+
 function PersonNode({ data }: { data: PersonNodeData }) {
-  const { label, image, isExpandable, isExpanded, isSpouse, level } = data;
+  const {
+    firstName,
+    surname,
+    birthYear,
+    deathYear,
+    place,
+    image,
+    isExpandable,
+    isExpanded,
+    isSpouse,
+    level
+  } = data;
+
+  const yearsDisplay = formatYears(birthYear, deathYear);
 
   return (
     <div
@@ -123,7 +172,7 @@ function PersonNode({ data }: { data: PersonNodeData }) {
         {image ? (
           <img
             src={image}
-            alt={label}
+            alt={`${firstName} ${surname}`}
             className="person-image"
             style={{
               width: '100%',
@@ -142,7 +191,23 @@ function PersonNode({ data }: { data: PersonNodeData }) {
         )}
       </div>
 
-      <div className="node-name">{label}</div>
+      {/* Name Display - First name on line 1, Surname on line 2 */}
+      <div className="node-info">
+        <div className="node-name">
+          <span className="first-name">{firstName}</span>
+          {surname && <span className="surname">{surname}</span>}
+        </div>
+
+        {/* Years Display - Same font size as name */}
+        {yearsDisplay && (
+          <div className="node-years">{yearsDisplay}</div>
+        )}
+
+        {/* Place Display - Smaller font */}
+        {place && (
+          <div className="node-place">{place}</div>
+        )}
+      </div>
 
       <Handle type="source" position={Position.Bottom} style={{ opacity: 0 }} />
     </div>
@@ -281,6 +346,11 @@ function FamilyTreeInner() {
         personX = x;
       }
 
+      // Split name into firstName and surname
+      const { firstName, surname } = node.firstName && node.surname
+        ? { firstName: node.firstName, surname: node.surname }
+        : splitName(node.name);
+
       // Add person node
       nodes.push({
         id: node.id,
@@ -288,6 +358,11 @@ function FamilyTreeInner() {
         position: { x: personX - LAYOUT.NODE_WIDTH / 2, y },
         data: {
           label: node.name,
+          firstName,
+          surname,
+          birthYear: node.birthYear,
+          deathYear: node.deathYear,
+          place: node.place,
           image: node.image,
           isExpandable: node.children.length > 0 || !!node.spouse,
           isExpanded,
@@ -306,12 +381,23 @@ function FamilyTreeInner() {
 
       // Add spouse node if expanded
       if (hasSpouse && node.spouse) {
+        // Split spouse name into firstName and surname
+        const { firstName: spouseFirstName, surname: spouseSurname } =
+          node.spouse.firstName && node.spouse.surname
+            ? { firstName: node.spouse.firstName, surname: node.spouse.surname }
+            : splitName(node.spouse.name);
+
         nodes.push({
           id: node.spouse.id,
           type: 'person',
           position: { x: spouseX! - LAYOUT.NODE_WIDTH / 2, y },
           data: {
             label: node.spouse.name,
+            firstName: spouseFirstName,
+            surname: spouseSurname,
+            birthYear: node.spouse.birthYear,
+            deathYear: node.spouse.deathYear,
+            place: node.spouse.place,
             image: node.spouse.image,
             isExpandable: false,
             isExpanded: false,
