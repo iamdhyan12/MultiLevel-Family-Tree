@@ -1,6 +1,6 @@
 {
   "id": "1",
-  "name": "Laxmichand Patel",
+  "name": "Laxmichanddas Patel",
   "spouse": {
     "id": "1-spouse",
     "name": "Revabaa Patel"
@@ -11,7 +11,7 @@
       "name": "Jeeviben Patel",
       "spouse": {
         "id": "2-spouse",
-        "name": "Narayan Patel",
+        "name": "Narayandas Patel",
         "birthYear": 1909,
         "deathYear": 1980
       },
@@ -111,7 +111,7 @@
               "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/ilaben_qwjxdv",
               "spouse": {
                 "id": "50-spouse",
-                "name": "Narendakumar Patel",
+                "name": "Rajinikant Patel",
                 "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/Narendrkumar_qd48wk",
                 "birthYear": 1965,
                 "place": "New Jersy, USA"
@@ -399,6 +399,7 @@
           "spouse": {
             "id": "26-spouse",
             "name": "Vidhyaben Patel",
+            "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/vidhyabaa_xubt5c",
             "birthYear": 1942,
             "deathYear": 2024
           },
@@ -477,6 +478,7 @@
               "spouse": {
                 "id": "73-spouse",
                 "name": "Surekhaben Patel",
+                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/surekha_rhl4o3",
                 "birthYear": 1969,
                 "place": "Ahmedabad"
               },
@@ -487,18 +489,22 @@
                   "spouse": {
                     "id": "120-spouse",
                     "name": "Helly Patel",
+                    "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/helly_zk1ea3",
                     "birthYear": 1997,
                     "place": "Ahmedabad"
                   },
                   "children": [],
+                  "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/deep_ywfix2",
                   "birthYear": 1996,
                   "place": "Ahmedabad"
                 }
               ],
+              "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/ramesh_maewtr",
               "birthYear": 1970,
               "place": "Ahmedabad"
             }
           ],
+          "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/natubapuji_pfhypy",
           "birthYear": 1938,
           "place": "Pansar, IND"
         },
@@ -513,6 +519,7 @@
             "place": "Gozariya, IND"
           },
           "children": [],
+          "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/subhadra_b8t0vt",
           "birthYear": 1943,
           "place": "Gozariya, IND"
         },
@@ -729,6 +736,21 @@
               "place": "Ahmedabad"
             },
             {
+              "id": "93",
+              "name": "Trupti Patel",
+              "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/trupti_fjgk77",
+              "spouse": {
+                "id": "93-spouse",
+                "name": "Mehulkumar Patel",
+                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/mehul_jkx4os",
+                "birthYear": 1977,
+                "place": "Merda Adaraj"
+              },
+              "children": [],
+              "birthYear": 1979,
+              "place": "Merda Adaraj"
+            },
+            {
               "id": "91",
               "name": "Hitesh Patel",
               "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/hitesh_m9dkvb",
@@ -751,21 +773,6 @@
               ],
               "birthYear": 1983,
               "place": "Winnipeg, Canada"
-            },
-            {
-              "id": "93",
-              "name": "Trupti Patel",
-              "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/trupti_fjgk77",
-              "spouse": {
-                "id": "93-spouse",
-                "name": "Mehulkumar Patel",
-                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/mehul_jkx4os",
-                "birthYear": 1977,
-                "place": "Merda Adaraj"
-              },
-              "children": [],
-              "birthYear": 1979,
-              "place": "Merda Adaraj"
             }
           ],
           "birthYear": 1952,
@@ -951,7 +958,7 @@
               "name": "Viral Patel",
               "spouse": {
                 "id": "100-spouse",
-                "name": "Reema Patel",
+                "name": "Hiral Patel",
                 "birthYear": 1980,
                 "place": "New Jersy, USA"
               },
@@ -978,7 +985,7 @@
               "name": "Dhiral Patel",
               "spouse": {
                 "id": "102-spouse",
-                "name": "Hiral Patel",
+                "name": "Rima Patel",
                 "birthYear": 1983,
                 "place": "New Jersy, USA"
               },
