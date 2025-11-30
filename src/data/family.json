@@ -524,7 +524,6 @@
             "name": "Madhuben Patel",
             "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/madhu5_mrqovw",
             "birthYear": 1949,
-            "deathYear": 2009,
             "place": "Ahmedabad,IND"
           },
           "children": [
@@ -598,6 +597,7 @@
             }
           ],
           "birthYear": 1946,
+          "deathYear": 2009,
           "place": "Ahmedabad ,IND"
         },
         {
@@ -744,7 +744,7 @@
                   "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/om_qmpjtm",
                   "children": [],
                   "birthYear": 2010,
-                  "place": "Ontario, Canada"
+                  "place": "Winnipeg, Canada"
                 }
               ],
               "birthYear": 1983,
