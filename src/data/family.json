@@ -541,7 +541,7 @@
               "spouse": {
                 "id": "75-spouse",
                 "name": "Heenaben Patel",
-                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/Heena_ufoe43",
+                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/heena_gzw6d1",
                 "birthYear": 1974,
                 "place": "Ahmedabad"
               },
@@ -914,7 +914,7 @@
                   "name": "Pranshav Patel",
                   "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/pranshav_nrc2p0",
                   "birthYear": 2003,
-                  "place": "Rayleigh,USA",
+                  "place": "Raleigh,USA",
                   "children": []
                 }
               ],
@@ -958,15 +958,17 @@
               "name": "Viral Patel",
               "spouse": {
                 "id": "100-spouse",
-                "name": "Hiral Patel",
+                "name": "Rima Patel",
+                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/Rima_b1bgkd",
                 "birthYear": 1980,
                 "place": "New Jersy, USA"
               },
               "children": [
                 {
                   "id": "134",
-                  "name": "Jaimin Patel",
+                  "name": "Jimit Patel",
                   "children": [],
+                  "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/Jimit_qxsjjt",
                   "birthYear": 2011,
                   "place": "New Jersy, USA"
                 },
@@ -985,15 +987,17 @@
               "name": "Dhiral Patel",
               "spouse": {
                 "id": "102-spouse",
-                "name": "Rima Patel",
+                "name": "Hiral Patel",
+                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/Hiral_kdjdsa",
                 "birthYear": 1983,
                 "place": "New Jersy, USA"
               },
               "children": [
                 {
                   "id": "135",
-                  "name": "Hit Patel",
+                  "name": "Heet Patel",
                   "children": [],
+                  "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/Heet_qmnt4d",
                   "birthYear": 2011,
                   "place": "New Jersy, USA"
                 }
