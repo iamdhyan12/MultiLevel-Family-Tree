@@ -26,7 +26,7 @@
       "spouse": {
         "id": "8-spouse",
         "name": "Dahiben Patel",
-        "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/nagardas_mps9e1",
+        "image": "",
         "birthYear": 1907,
         "deathYear": 1961
       },
@@ -380,6 +380,7 @@
           "place": "Atlanta, USA"
         }
       ],
+      "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/nagardas_mps9e1",
       "birthYear": 1905,
       "deathYear": 1987,
       "place": "Pansar,IND"
