@@ -11,7 +11,7 @@
       "name": "Jeeviben Patel",
       "spouse": {
         "id": "2-spouse",
-        "name": "Narayandas Patel",
+        "name": "Narandas Patel",
         "birthYear": 1909,
         "deathYear": 1980
       },
@@ -111,7 +111,7 @@
               "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/ilaben_qwjxdv",
               "spouse": {
                 "id": "50-spouse",
-                "name": "Rajinikant Patel",
+                "name": "Rajnikant Patel",
                 "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/Narendrkumar_qd48wk",
                 "birthYear": 1965,
                 "place": "New Jersy, USA"
@@ -143,7 +143,7 @@
                   },
                   "children": [
                     {
-                      "id": "142",
+                      "id": "141",
                       "name": "Harvi Patel",
                       "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/Harvi_mlvcpo",
                       "children": [],
@@ -151,7 +151,7 @@
                       "place": "Ontario, Canada"
                     },
                     {
-                      "id": "143",
+                      "id": "142",
                       "name": "Mihan Patel",
                       "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/mihaan_wrbwel",
                       "children": [],
@@ -373,7 +373,7 @@
     },
     {
       "id": "4",
-      "name": "Ujiben Patel",
+      "name": "Ujaliben Patel",
       "spouse": {
         "id": "4-spouse",
         "name": "Mangaldas Patel"
@@ -444,8 +444,8 @@
                   },
                   "children": [
                     {
-                      "id": "144",
-                      "name": "Jiyaan Patel",
+                      "id": "143",
+                      "name": "Jiaan Patel",
                       "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/jiyaan_dmtrzd",
                       "children": [],
                       "birthYear": 2012,
@@ -910,7 +910,7 @@
               "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/ketal_ioexmg",
               "children": [
                 {
-                  "id": "146",
+                  "id": "144",
                   "name": "Pranshav Patel",
                   "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/pranshav_nrc2p0",
                   "birthYear": 2003,
@@ -943,7 +943,7 @@
         },
         {
           "id": "42",
-          "name": "Dasrathbhai Patel",
+          "name": "Dashrathbhai Patel",
           "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/Dasrathbhai_zw4kei",
           "spouse": {
             "id": "42-spouse",
@@ -971,11 +971,6 @@
                   "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/Jimit_qxsjjt",
                   "birthYear": 2011,
                   "place": "New Jersy, USA"
-                },
-                {
-                  "id": "141",
-                  "name": "Dhruvi Patel",
-                  "children": []
                 }
               ],
               "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/viral_uxgkpu",

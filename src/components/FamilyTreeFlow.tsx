@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState, useEffect } from 'react';
+import React, { useCallback, useMemo, useState, useEffect } from 'react';
 import {
   ReactFlow,
   type Node,
@@ -533,24 +533,26 @@ function FamilyTreeInner() {
   }, [expanded]);
 
   const { getViewport, setViewport } = useReactFlow();
+  const hasInitialShift = React.useRef(false);
 
-  // After fitView, shift the tree up (especially helpful on mobile)
+  // After initial fitView, shift the tree up ONCE (especially helpful on mobile)
   useEffect(() => {
-    // Small delay to ensure fitView has completed
+    // Only do this once on initial load
+    if (hasInitialShift.current) return;
+
     const timer = setTimeout(() => {
       const viewport = getViewport();
-      // Move the tree UP on screen by SUBTRACTING from Y
-      // Adjust this value: larger = tree appears higher
       const shiftAmount = 150; // <<< CHANGE THIS: pixels to shift tree upward
       setViewport({
         x: viewport.x,
-        y: viewport.y - shiftAmount,  // SUBTRACT to move tree UP
+        y: viewport.y - shiftAmount,
         zoom: viewport.zoom
       }, { duration: 0 });
+      hasInitialShift.current = true;
     }, 50);
 
     return () => clearTimeout(timer);
-  }, [nodes, getViewport, setViewport]);
+  }, [getViewport, setViewport]);
 
   return (
     <ReactFlow
