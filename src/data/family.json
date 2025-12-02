@@ -12,9 +12,11 @@
       "spouse": {
         "id": "2-spouse",
         "name": "Narandas Patel",
+        "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/narandas_hnpgao",
         "birthYear": 1909,
         "deathYear": 1980
       },
+      "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/jeeviben_bnan9s",
       "children": [],
       "place": "Sardhav, IND"
     },
@@ -47,9 +49,11 @@
           "spouse": {
             "id": "16-spouse",
             "name": "Virchanddas Patel",
+            "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/virchand_stzrnp",
             "deathYear": 2000
           },
           "children": [],
+          "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/amba_asolzy",
           "deathYear": 2013,
           "place": "Sheratha, IND"
         },
@@ -138,6 +142,7 @@
                   "spouse": {
                     "id": "110-spouse",
                     "name": "Palak Patel",
+                    "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/palak_tnhfl8",
                     "birthYear": 1988,
                     "place": "Ontario, Canada"
                   },
@@ -159,6 +164,7 @@
                       "place": "Ontario, Canada"
                     }
                   ],
+                  "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/ritul_vs9m3w",
                   "birthYear": 1985,
                   "place": "Ontario, Canada"
                 },
@@ -358,6 +364,7 @@
               "id": "66",
               "name": "Nilesh Patel",
               "children": [],
+              "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/nilesh_cai2cs",
               "birthYear": 1976,
               "deathYear": 2013,
               "place": "Atlanta, USA"
@@ -465,10 +472,12 @@
               "spouse": {
                 "id": "71-spouse",
                 "name": "Sureshbhai",
+                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/suresh2_jt1fru",
                 "birthYear": 1963,
                 "place": "Vamaj"
               },
               "children": [],
+              "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/veena2_gdprut",
               "birthYear": 1966,
               "place": "Vamaj"
             },
@@ -801,6 +810,7 @@
       "spouse": {
         "id": "12-spouse",
         "name": "Shakariben Patel",
+        "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/sakribaa_pz3qxd",
         "birthYear": 1916,
         "deathYear": 2019
       },
@@ -873,6 +883,23 @@
               "place": "Hattiesburg, USA"
             },
             {
+              "id": "99",
+              "name": "Ketalben Patel",
+              "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/ketal_ioexmg",
+              "children": [
+                {
+                  "id": "144",
+                  "name": "Pranshav Patel",
+                  "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/pranshav_nrc2p0",
+                  "birthYear": 2003,
+                  "place": "Raleigh,USA",
+                  "children": []
+                }
+              ],
+              "birthYear": 1974,
+              "place": "Ahmedabad"
+            },
+            {
               "id": "97",
               "name": "Miteshbhai Patel",
               "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/Mitesh_s8b2vw",
@@ -902,23 +929,6 @@
                 }
               ],
               "birthYear": 1976,
-              "place": "Ahmedabad"
-            },
-            {
-              "id": "99",
-              "name": "Ketalben Patel",
-              "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/ketal_ioexmg",
-              "children": [
-                {
-                  "id": "144",
-                  "name": "Pranshav Patel",
-                  "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/pranshav_nrc2p0",
-                  "birthYear": 2003,
-                  "place": "Raleigh,USA",
-                  "children": []
-                }
-              ],
-              "birthYear": 1974,
               "place": "Ahmedabad"
             }
           ],
@@ -1012,6 +1022,7 @@
           "spouse": {
             "id": "44-spouse",
             "name": "Jyotsnaben Patel",
+            "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/jyotsna_ljcviq",
             "birthYear": 1959,
             "deathYear": 2019,
             "place": "Ahmedabad"
@@ -1023,10 +1034,12 @@
               "spouse": {
                 "id": "104-spouse",
                 "name": "Jignesh Patel",
+                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/jignesh_qdstbq",
                 "birthYear": 1977,
                 "place": "Ahmedabad"
               },
               "children": [],
+              "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/hetal_blm69h",
               "birthYear": 1979,
               "place": "Ahmedabad"
             },
@@ -1082,6 +1095,7 @@
           "place": "Ahmedabad"
         }
       ],
+      "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/ishwardas_xktg9o",
       "birthYear": 1915,
       "deathYear": 1992,
       "place": "Pansar, IND"

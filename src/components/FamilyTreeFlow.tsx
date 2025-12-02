@@ -535,23 +535,30 @@ function FamilyTreeInner() {
   const { getViewport, setViewport } = useReactFlow();
   const hasInitialShift = React.useRef(false);
 
-  // After initial fitView, shift the tree up ONCE (especially helpful on mobile)
+  // After initial fitView, shift the tree up ONCE (only on mobile/tablet screens)
   useEffect(() => {
     // Only do this once on initial load
     if (hasInitialShift.current) return;
+    hasInitialShift.current = true;
 
-    const timer = setTimeout(() => {
-      const viewport = getViewport();
-      const shiftAmount = 150; // <<< CHANGE THIS: pixels to shift tree upward
-      setViewport({
-        x: viewport.x,
-        y: viewport.y - shiftAmount,
-        zoom: viewport.zoom
-      }, { duration: 0 });
-      hasInitialShift.current = true;
-    }, 50);
+    // Only apply shift on smaller screens (mobile/tablet)
+    // On laptop/desktop (width > 1024), don't shift - let fitView center naturally
+    const isMobileOrTablet = window.innerWidth <= 1024;
 
-    return () => clearTimeout(timer);
+    if (!isMobileOrTablet) return;
+
+    // Use requestAnimationFrame for smoother, faster application
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const viewport = getViewport();
+        const shiftAmount = 150; // <<< CHANGE THIS: pixels to shift tree upward on mobile/tablet
+        setViewport({
+          x: viewport.x,
+          y: viewport.y - shiftAmount,
+          zoom: viewport.zoom
+        }, { duration: 0 });
+      });
+    });
   }, [getViewport, setViewport]);
 
   // Calculate bounds for panning limits based on nodes
