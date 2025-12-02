@@ -554,6 +554,34 @@ function FamilyTreeInner() {
     return () => clearTimeout(timer);
   }, [getViewport, setViewport]);
 
+  // Calculate bounds for panning limits based on nodes
+  const translateExtent = useMemo((): [[number, number], [number, number]] => {
+    if (nodes.length === 0) {
+      return [[-Infinity, -Infinity], [Infinity, Infinity]];
+    }
+
+    // Find the bounding box of all nodes
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+
+    for (const node of nodes) {
+      const x = node.position.x;
+      const y = node.position.y;
+      minX = Math.min(minX, x);
+      minY = Math.min(minY, y);
+      maxX = Math.max(maxX, x + LAYOUT.NODE_WIDTH);
+      maxY = Math.max(maxY, y + LAYOUT.NODE_HEIGHT);
+    }
+
+    // Add padding around the bounds (allows some panning but not too far)
+    const paddingX = 500;  // <<< ADJUST: horizontal padding (larger = more pan freedom)
+    const paddingY = 400;  // <<< ADJUST: vertical padding (larger = more pan freedom)
+
+    return [
+      [minX - paddingX, minY - paddingY],  // Top-left corner limit
+      [maxX + paddingX, maxY + paddingY]   // Bottom-right corner limit
+    ];
+  }, [nodes]);
+
   return (
     <ReactFlow
       nodes={nodes}
@@ -563,10 +591,11 @@ function FamilyTreeInner() {
       onNodeMouseEnter={onNodeMouseEnter}
       fitView
       fitViewOptions={{
-        padding: 0.1,           // <<< Adjust this: smaller = larger tree (0.05 to 0.2)
+        padding: 0.1,
         duration: 0,
       }}
-      minZoom={0.1}
+      translateExtent={translateExtent}
+      minZoom={0.2}             // <<< Increased from 0.1 to prevent zooming out too much
       maxZoom={2}
       nodesDraggable={false}
       nodesConnectable={false}
