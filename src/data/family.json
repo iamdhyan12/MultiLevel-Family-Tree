@@ -49,7 +49,7 @@
           "spouse": {
             "id": "16-spouse",
             "name": "Virchanddas Patel",
-            "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/virchand_stzrnp",
+            "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/vir_zuhfvy",
             "deathYear": 2000
           },
           "children": [],
@@ -89,10 +89,12 @@
               "spouse": {
                 "id": "46-spouse",
                 "name": "Manulal Patel",
+                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/Manulal_hgvrwq",
                 "birthYear": 1956,
                 "place": "Sardhav"
               },
               "children": [],
+              "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/usha_meiceh",
               "birthYear": 1955,
               "place": "Sardhav"
             },
@@ -102,10 +104,12 @@
               "spouse": {
                 "id": "48-spouse",
                 "name": "Narendrakumar Patel",
+                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/na_tgcccg",
                 "birthYear": 1955,
                 "place": "Boston, USA"
               },
               "children": [],
+              "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/uma_kxzxz4",
               "birthYear": 1958,
               "place": "Boston, USA"
             },
@@ -686,7 +690,7 @@
               "children": [
                 {
                   "id": "125",
-                  "name": "Riyaan",
+                  "name": "Rian",
                   "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/riaan_rganpf",
                   "children": [],
                   "birthYear": 2012,
@@ -913,7 +917,7 @@
               "children": [
                 {
                   "id": "132",
-                  "name": "Sanvi Patel",
+                  "name": "Saanvi Patel",
                   "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/Sanvi_s9mntt",
                   "children": [],
                   "birthYear": 2003,
