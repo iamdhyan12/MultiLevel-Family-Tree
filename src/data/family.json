@@ -26,6 +26,7 @@
       "spouse": {
         "id": "8-spouse",
         "name": "Dahiben Patel",
+        "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/nagardas_mps9e1",
         "birthYear": 1907,
         "deathYear": 1961
       },
@@ -69,7 +70,7 @@
           },
           "children": [],
           "deathYear": 1985,
-          "place": "Gozariya, IND"
+          "place": "Gozaria, IND"
         },
         {
           "id": "20",
@@ -181,11 +182,11 @@
                     "name": "Vicky Patel",
                     "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/vicky_f9kxuh",
                     "birthYear": 1986,
-                    "place": "Ahmedabad"
+                    "place": "Thol"
                   },
                   "children": [],
                   "birthYear": 1988,
-                  "place": "Ahmedabad"
+                  "place": "Thol"
                 }
               ],
               "birthYear": 1960,
@@ -204,6 +205,7 @@
                   "id": "114",
                   "name": "Dr.Keval Patel",
                   "children": [],
+                  "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/keval_ro7zkf",
                   "birthYear": 1989,
                   "place": "New Jersy, USA"
                 },
@@ -251,7 +253,7 @@
               "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/dhara_bt3azh",
               "spouse": {
                 "id": "58-spouse",
-                "name": "Maulik Patel",
+                "name": "Maulikkumar Patel",
                 "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/maulik_rn3hkj",
                 "birthYear": 1972,
                 "place": "Ahmedabad"
@@ -421,7 +423,7 @@
               "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/sarojben_vxxlp8",
               "spouse": {
                 "id": "67-spouse",
-                "name": "Rajendra Patel",
+                "name": "Rajendrakumar Patel",
                 "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/rajendra_c0bezc",
                 "birthYear": 1961,
                 "place": "Gozaria"
@@ -529,12 +531,12 @@
             "name": "Gandalal Patel",
             "birthYear": 1936,
             "deathYear": 2011,
-            "place": "Gozariya, IND"
+            "place": "Gozaria, IND"
           },
           "children": [],
           "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/subhadra_b8t0vt",
           "birthYear": 1943,
-          "place": "Gozariya, IND"
+          "place": "Gozaria, IND"
         },
         {
           "id": "30",
@@ -641,6 +643,7 @@
               "spouse": {
                 "id": "81-spouse",
                 "name": "Dilipkumar Patel",
+                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/dilipkumar_aueiuo",
                 "birthYear": 1971,
                 "place": "Langhnaj"
               },
@@ -962,7 +965,7 @@
           "spouse": {
             "id": "42-spouse",
             "name": "Kapilaben Patel",
-            "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/kapilabaa_ypnkev",
+            "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/kapilabaa_ypnkev",
             "birthYear": 1954,
             "place": "New Jersey, USA"
           },
@@ -973,7 +976,7 @@
               "spouse": {
                 "id": "100-spouse",
                 "name": "Rima Patel",
-                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/Rima_b1bgkd",
+                "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/Rima_b1bgkd",
                 "birthYear": 1980,
                 "place": "New Jersy, USA"
               },
@@ -1040,12 +1043,12 @@
                 "name": "Jignesh Patel",
                 "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/jignesh_qdstbq",
                 "birthYear": 1977,
-                "place": "Ahmedabad"
+                "place": "Ode,Pirana"
               },
               "children": [],
               "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/ar_1:1,c_auto,g_auto,w_500/r_max/hetal_blm69h",
               "birthYear": 1979,
-              "place": "Ahmedabad"
+              "place": "Ode,Pirana"
             },
             {
               "id": "106",
@@ -1053,14 +1056,14 @@
               "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/payal_whhhjc",
               "spouse": {
                 "id": "106-spouse",
-                "name": "Ronak Patel",
+                "name": "Ronakkumar Patel",
                 "image": "https://res.cloudinary.com/dyedk8jpe/image/upload/c_thumb,g_face,h_200,w_200/r_max/f_auto/ronak_w24ufm",
                 "birthYear": 1980,
-                "place": "Ahmedabad"
+                "place": "Merda Adaraj"
               },
               "children": [],
               "birthYear": 1981,
-              "place": "Ahmedabad"
+              "place": "Merda Adaraj"
             },
             {
               "id": "108",
